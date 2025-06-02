@@ -1,8 +1,6 @@
-all: README.md
-
-README.md: guessinggame.sh
-	echo "# Guessing Game Project" > README.md
+README.md: 	guessinggame.sh
+	echo "# Project Title: Guessing Game Assignment" > README.md
 	echo "" >> README.md
-	echo "Date and time: $$(date)" >> README.md
+	echo "**Makefile run date and time:** $(shell date)" >> README.md
 	echo "" >> README.md
-	echo "Number of lines in guessinggame.sh: $$(wc -l < guessinggame.sh)" >> README.md
+	echo "**Number of lines of code in guessinggame.sh:** $(shell wc -l < guessinggame.sh | xargs)" >> README.md
